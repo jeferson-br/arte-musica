@@ -1,0 +1,320 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Alucinação do IFRN</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Press+Start+2P&display=swap">
+<style>
+/* Concept: personal homepage circa 2003. Starfield, beveled panels, marquee, visitor counter, one centered column. Single committed look. */
+:root {
+  --bg: #000033;
+  --ink: #ffffff;
+  --link: #00ffff;
+  --visited: #ff66ff;
+  --hot: #ffff00;
+  --panel: #000080;
+  --panel-2: #000055;
+  --edge: #c0c0c0;
+  --lime: #33ff33;
+  --alert: #ff0033;
+  --font-body: "Comic Sans MS", "Comic Neue", "Chalkboard SE", cursive, sans-serif;
+  --font-pixel: "Press Start 2P", "Courier New", monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 80px, #cfe, transparent),
+    radial-gradient(2px 2px at 150px 20px, #ff9, transparent),
+    radial-gradient(1px 1px at 60px 140px, #fff, transparent),
+    radial-gradient(1px 1px at 180px 120px, #fcf, transparent);
+  background-size: 200px 200px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  padding-block: 12px 32px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--link); }
+a:visited { color: var(--visited); }
+a:hover { color: var(--hot); }
+a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 3px dashed var(--hot); outline-offset: 2px; }
+
+.wrap { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.center { text-align: center; }
+
+.ticker { border: 3px ridge var(--edge); background: #000; color: var(--lime); font-family: var(--font-pixel); font-size: 11px; overflow: hidden; white-space: nowrap; padding: 8px 0; }
+.ticker span { display: inline-block; padding-left: 100%; animation: roll 22s linear infinite; }
+@keyframes roll { to { transform: translateX(-100%); } }
+
+h1 { margin: 0; font-size: clamp(30px, 8vw, 56px); line-height: 1.1; text-wrap: balance; color: var(--hot); text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #000; }
+h2 { margin: 0 0 8px; font-size: 22px; color: var(--lime); text-wrap: balance; text-decoration: underline wavy var(--visited); text-underline-offset: 4px; }
+.sub { margin: 6px 0 0; color: var(--link); font-size: 18px; }
+.blink { animation: blink 1s steps(2, start) infinite; color: var(--alert); font-weight: 700; }
+@keyframes blink { to { visibility: hidden; } }
+
+.rainbow { height: 6px; border: 0; margin: 0; background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta, red); }
+
+.box { background: var(--panel); border: 4px ridge var(--edge); padding: 14px 16px; min-width: 0; }
+.box.alt { background: var(--panel-2); }
+
+.nav { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.btn, .nav a { display: inline-block; padding: 6px 12px; background: var(--edge); color: #000; border: 3px outset #fff; font-family: var(--font-body); font-weight: 700; font-size: 15px; text-decoration: none; cursor: pointer; }
+.nav a:visited { color: #000; }
+.btn:active, .nav a:active { border-style: inset; }
+.nav a:hover, .btn:hover { background: var(--hot); color: #000; }
+
+.counter { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; font-size: 14px; }
+.digits { font-family: var(--font-pixel); font-size: 16px; background: #000; color: var(--lime); border: 3px inset var(--edge); padding: 8px 10px; letter-spacing: 3px; }
+
+.verse { margin: 0; font-size: 18px; white-space: normal; }
+.verse p { margin: 0 0 14px; }
+.verse span { display: block; }
+.tag { display: inline-block; font-family: var(--font-pixel); font-size: 10px; background: var(--hot); color: #000; padding: 4px 6px; margin-bottom: 8px; }
+
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.cols > * { min-width: 0; }
+textarea { width: 100%; min-height: 220px; background: #000; color: var(--lime); border: 3px inset var(--edge); font-family: "Courier New", monospace; font-size: 14px; padding: 8px; resize: vertical; }
+.hint { font-size: 14px; color: #ccd; margin: 6px 0 0; }
+
+.tablebox { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { border: 2px solid var(--edge); padding: 4px 8px; text-align: left; vertical-align: top; }
+th { background: #000; color: var(--hot); }
+td.num { text-align: center; font-variant-numeric: tabular-nums; }
+.ok { color: var(--lime); font-weight: 700; }
+.off { color: var(--alert); font-weight: 700; }
+
+ul.links { margin: 0; padding-left: 22px; }
+ul.links li { overflow-wrap: anywhere; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; font-family: var(--font-pixel); font-size: 9px; }
+.badges span { border: 2px outset var(--edge); background: #000; padding: 6px 8px; color: var(--link); }
+
+.construction { background: repeating-linear-gradient(45deg, #ffe600 0 14px, #111 14px 28px); padding: 6px; }
+.construction div { background: #000; color: var(--hot); text-align: center; font-family: var(--font-pixel); font-size: 10px; padding: 8px; line-height: 1.6; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker span { animation: none; padding-left: 0; white-space: normal; display: block; padding: 0 8px; }
+  .ticker { white-space: normal; }
+  .blink { animation: none; }
+}
+</style>
+
+<div class="wrap">
+
+  <div class="ticker" role="marquee" aria-label="Avisos do site"><span>★ Bem-vindo(a) à Alucinação do IFRN ★ Em setembro o campus João Câmara faz aniversário! ★ Paródia inspirada em Belchior ★ Assine o livro de visitas ★ Melhor visualizado em 800x600 ★</span></div>
+
+  <header class="box center">
+    <h1>Alucinação do IFRN</h1>
+    <p class="sub">Paródia de uma canção de Belchior sobre o que o IFRN provoca na minha vida</p>
+    <p><span class="blink">NOVO!</span> Letra atualizada em outubro de 2026</p>
+  </header>
+
+  <hr class="rainbow">
+
+  <nav class="nav" aria-label="Menu do site">
+    <a href="#letra">A Letra</a>
+    <a href="#comparar">Comparar</a>
+    <a href="#links">Links</a>
+    <a href="#aniversario">Aniversário</a>
+    <a href="#livro">Livro de Visitas</a>
+  </nav>
+
+  <hr class="rainbow">
+
+  <section class="box" id="aniversario">
+    <h2>Parabéns, campus João Câmara!</h2>
+    <p>Setembro é mês de festa: o IFRN João Câmara faz aniversário. A paródia abaixo é a minha homenagem para quem passa o dia ali dentro: professores, técnicos, colegas e todo mundo que faz a escola acontecer.</p>
+    <p>O tema é simples: o que o IFRN provoca na minha vida. Dá sono às vezes, dá trabalho quase sempre, e dá futuro no fim.</p>
+  </section>
+
+  <section class="box" id="letra">
+    <h2>A Letra (minha versão)</h2>
+    <div class="verse">
+      <span class="tag">ESTROFE</span>
+      <p>
+        <span>Saí de casa cedo, com o sol ainda dormindo,</span>
+        <span>mochila nas costas e o futuro na estrada;</span>
+        <span>em João Câmara, a sala de aula foi me abrindo</span>
+        <span>uma porta, um caminho, uma vida pensada.</span>
+        <span>Aprendi com o professor que o saber não tem dono,</span>
+        <span>que a ciência é o trigo e a pesquisa é o pão,</span>
+        <span>e que o laboratório, às vezes, é só o outono</span>
+        <span>de quem planta pergunta e colhe transformação.</span>
+      </p>
+      <span class="tag">REFRÃO</span>
+      <p>
+        <span>Mas o IFRN é a minha invenção de futuro,</span>
+        <span>é sonhar acordado, com o pé firme no muro</span>
+        <span>que separa o que sou do que posso vir a ser;</span>
+        <span>cada aula é uma ponte, cada amigo, um prazer.</span>
+        <span>E em setembro o campus João Câmara faz aniversário:</span>
+        <span>parabéns pra quem ensina e pra quem faz o itinerário!</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="box alt" id="comparar">
+    <h2>Comparar com a original</h2>
+    <p>A letra de "Alucinação" tem direitos autorais, então ela não está neste site. Abra a letra no link da seção Links, copie a estrofe e o refrão que você escolheu e cole na caixa da esquerda, um verso por linha. A tabela abaixo conta as sílabas dos dois lados.</p>
+    <div class="cols">
+      <div>
+        <label for="orig"><strong>Original (cole aqui)</strong></label>
+        <textarea id="orig" spellcheck="false" placeholder="Cole aqui os versos da música original, um por linha."></textarea>
+      </div>
+      <div>
+        <label for="mine"><strong>Minha versão (pode editar)</strong></label>
+        <textarea id="mine" spellcheck="false"></textarea>
+      </div>
+    </div>
+    <p class="hint">Contagem aproximada: segue a regra de contar até a última sílaba tônica e junta vogais entre palavras. Confira cantando em cima da melodia.</p>
+    <p class="center"><button class="btn" id="count" type="button">Contar sílabas</button></p>
+    <div class="tablebox" id="result" aria-live="polite"></div>
+  </section>
+
+  <section class="box" id="links">
+    <h2>Links</h2>
+    <ul class="links">
+      <li>Ouvir a música original: <a href="https://www.youtube.com/results?search_query=Belchior+Alucina%C3%A7%C3%A3o" target="_blank" rel="noopener">busca no YouTube por "Belchior Alucinação"</a></li>
+      <li>Letra original: <a href="https://www.letras.mus.br/belchior/" target="_blank" rel="noopener">página de Belchior no Letras</a></li>
+      <li>Minha versão gravada: ainda não publicada. Quando eu gravar, o link entra aqui.</li>
+    </ul>
+    <p class="hint">Os dois primeiros links são de busca e consulta. Troque pelo vídeo e pela letra exatos que você usar no trabalho.</p>
+  </section>
+
+  <section class="box" id="livro">
+    <h2>Livro de Visitas</h2>
+    <p>Deixe seu recado para o campus. Ele fica só neste navegador, como um rascunho.</p>
+    <label for="nome"><strong>Seu nome</strong></label><br>
+    <input id="nome" type="text" maxlength="40" style="width:100%;max-width:320px;margin:4px 0 8px;font-family:var(--font-body);padding:4px;background:#000;color:var(--lime);border:3px inset var(--edge);"><br>
+    <label for="msg"><strong>Recado</strong></label>
+    <textarea id="msg" style="min-height:80px;" maxlength="200"></textarea>
+    <p><button class="btn" id="save" type="button">Assinar</button> <span id="saved" class="ok" aria-live="polite"></span></p>
+  </section>
+
+  <div class="construction"><div>EM CONSTRUÇÃO<br>Mais estrofes em breve</div></div>
+
+  <div class="box center">
+    <div class="counter">
+      <span>Você é o visitante número</span>
+      <span class="digits" id="digits">000001</span>
+      <span>(contado neste navegador)</span>
+    </div>
+  </div>
+
+  <div class="badges" aria-hidden="true">
+    <span>HTML 4.01</span><span>Netscape Now!</span><span>IE 6</span><span>800x600</span><span>Feito no Bloco de Notas</span>
+  </div>
+
+  <hr class="rainbow">
+  <p class="center hint">© 2026 Alucinação do IFRN. Paródia de fins educacionais. A música original pertence a Belchior e aos seus detentores de direitos.</p>
+
+</div>
+
+<script>
+(function () {
+  var mineText = [
+    "Saí de casa cedo, com o sol ainda dormindo,",
+    "mochila nas costas e o futuro na estrada;",
+    "em João Câmara, a sala de aula foi me abrindo",
+    "uma porta, um caminho, uma vida pensada.",
+    "Aprendi com o professor que o saber não tem dono,",
+    "que a ciência é o trigo e a pesquisa é o pão,",
+    "e que o laboratório, às vezes, é só o outono",
+    "de quem planta pergunta e colhe transformação.",
+    "Mas o IFRN é a minha invenção de futuro,",
+    "é sonhar acordado, com o pé firme no muro",
+    "que separa o que sou do que posso vir a ser;",
+    "cada aula é uma ponte, cada amigo, um prazer.",
+    "E em setembro o campus João Câmara faz aniversário:",
+    "parabéns pra quem ensina e pra quem faz o itinerário!"
+  ].join("\n");
+  document.getElementById("mine").value = mineText;
+
+  /* contagem aproximada de sílabas poéticas */
+  var V = "aeiouáéíóúâêôãõàü";
+  function isV(c) { return V.indexOf(c) !== -1; }
+  function wordsOf(line) {
+    return line.toLowerCase().replace(/[^a-záéíóúâêôãõàüç\s-]/g, " ").split(/\s+/).filter(Boolean);
+  }
+  function groups(w) {
+    var n = 0, prev = false;
+    for (var i = 0; i < w.length; i++) {
+      var v = isV(w[i]);
+      if (v && !prev) n++;
+      prev = v;
+    }
+    return n;
+  }
+  function oxytone(w) {
+    if (/[áéíóúâêô]/.test(w)) {
+      var m = w.search(/[áéíóúâêô]/);
+      return groups(w.slice(m + 1)) === 0;
+    }
+    if (/(ão|ões|ãos|ãe|ães|õe)$/.test(w)) return true;
+    return /(r|l|z|i|u|im|um|ns|is|us)$/.test(w) && !/(ia|io)s?$/.test(w);
+  }
+  function count(line) {
+    var ws = wordsOf(line);
+    if (!ws.length) return null;
+    var total = 0, endsV = false;
+    for (var i = 0; i < ws.length; i++) {
+      var w = ws[i];
+      var g = groups(w);
+      var startsV = isV(w[0]) || (w[0] === "h" && isV(w[1] || ""));
+      if (i > 0 && endsV && startsV) g = Math.max(g - 1, 0);
+      total += g;
+      endsV = isV(w[w.length - 1]);
+    }
+    var last = ws[ws.length - 1];
+    if (!oxytone(last)) total -= 1;
+    return total;
+  }
+  function lines(id) {
+    return document.getElementById(id).value.split("\n").map(function (s) { return s.trim(); }).filter(Boolean);
+  }
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  document.getElementById("count").addEventListener("click", function () {
+    var a = lines("orig"), b = lines("mine");
+    var n = Math.max(a.length, b.length);
+    if (!n) return;
+    var rows = "";
+    for (var i = 0; i < n; i++) {
+      var ca = a[i] ? count(a[i]) : null, cb = b[i] ? count(b[i]) : null;
+      var st = "";
+      if (ca !== null && cb !== null) {
+        var d = cb - ca;
+        st = d === 0 ? '<span class="ok">igual</span>' : '<span class="off">' + (d > 0 ? "+" : "") + d + "</span>";
+      }
+      rows += "<tr><td class=\"num\">" + (i + 1) + "</td><td>" + (a[i] ? esc(a[i]) : "") + "</td><td class=\"num\">" + (ca === null ? "-" : ca) + "</td><td>" + (b[i] ? esc(b[i]) : "") + "</td><td class=\"num\">" + (cb === null ? "-" : cb) + "</td><td class=\"num\">" + st + "</td></tr>";
+    }
+    document.getElementById("result").innerHTML = "<table><thead><tr><th>#</th><th>Original</th><th>Síl.</th><th>Minha versão</th><th>Síl.</th><th>Dif.</th></tr></thead><tbody>" + rows + "</tbody></table>";
+  });
+
+  /* contador de visitas e livro de visitas, só neste navegador */
+  var visits = 1;
+  try {
+    visits = (parseInt(localStorage.getItem("ifrn_visits"), 10) || 0) + 1;
+    localStorage.setItem("ifrn_visits", String(visits));
+  } catch (e) {}
+  document.getElementById("digits").textContent = String(visits).padStart(6, "0");
+
+  try {
+    document.getElementById("nome").value = localStorage.getItem("ifrn_nome") || "";
+    document.getElementById("msg").value = localStorage.getItem("ifrn_msg") || "";
+  } catch (e) {}
+  document.getElementById("save").addEventListener("click", function () {
+    var ok = true;
+    try {
+      localStorage.setItem("ifrn_nome", document.getElementById("nome").value);
+      localStorage.setItem("ifrn_msg", document.getElementById("msg").value);
+    } catch (e) { ok = false; }
+    document.getElementById("saved").textContent = ok ? "Recado guardado neste navegador!" : "Não foi possível guardar aqui.";
+  });
+})();
+</script>
+
+</body></html>
